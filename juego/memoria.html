@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Memoria Exclusivo</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Juego de Memoria</h1>
+        <div class="controls">
+            <button id="start-btn">Iniciar</button>
+            <button id="dejar-btn">Dejar de jugar</button>
+            <button id="exit-btn">Salir del Juego</button>
+            
+        </div>
+        <div id="timer">Tiempo: 3:00</div>
+        <div class="grid" id="game-grid">
+            <!-- Aquí agregaremos las cartas manualmente -->
+
+            <div class="card" data-name="A">
+                <div class="card-inner">
+                    <div class="card-front">?</div>
+                    <div class="card-back"></div>
+                </div>
+            </div>
+            <div class="card" data-name="A">
+                <div class="card-inner">
+                    <div class="card-front">?</div>
+                    <div class="card-back"></div>
+                </div>
+            </div>
+            <div class="card" data-name="B">
+                <div class="card-inner">
+                    <div class="card-front">?</div>
+                    <div class="card-back"></div>
+                </div>
+            </div>
+            <div class="card" data-name="B">
+                <div class="card-inner">
+                    <div class="card-front">?</div>
+                    <div class="card-back"></div>
+                </div>
+            </div>
+            <div class="card" data-name="C">
+                <div class="card-inner">
+                    <div class="card-front">?</div>
+                    <div class="card-back"></div>
+                </div>
+            </div>
+            <div class="card" data-name="C">
+                <div class="card-inner">
+                    <div class="card-front">?</div>
+                    <div class="card-back"></div>
+                </div>
+            </div>
+            <div class="card" data-name="D">
+                <div class="card-inner">
+                    <div class="card-front">?</div>
+                    <div class="card-back"></div>
+                </div>
+            </div>
+            <div class="card" data-name="D">
+                <div class="card-inner">
+                    <div class="card-front">?</div>
+                    <div class="card-back"></div>
+                </div>
+            </div>
+            <div class="card" data-name="E">
+                <div class="card-inner">
+                    <div class="card-front">?</div>
+                    <div class="card-back"></div>
+                </div>
+            </div>
+            <div class="card" data-name="E">
+                <div class="card-inner">
+                    <div class="card-front">?</div>
+                    <div class="card-back"></div>
+                </div>
+            </div>
+            <div class="card" data-name="F">
+                <div class="card-inner">
+                    <div class="card-front">?</div>
+                    <div class="card-back"></div>
+                </div>
+            </div>
+            <div class="card" data-name="F">
+                <div class="card-inner">
+                    <div class="card-front">?</div>
+                    <div class="card-back"></div>
+                </div>
+            </div>
+            <div class="card" data-name="G">
+                <div class="card-inner">
+                    <div class="card-front">?</div>
+                    <div class="card-back"></div>
+                </div>
+            </div>
+            <div class="card" data-name="G">
+                <div class="card-inner">
+                    <div class="card-front">?</div>
+                    <div class="card-back"></div>
+                </div>
+            </div>
+            <div class="card" data-name="H">
+                <div class="card-inner">
+                    <div class="card-front">?</div>
+                    <div class="card-back"></div>
+                </div>
+            </div>
+            <div class="card" data-name="H">
+                <div class="card-inner">
+                    <div class="card-front">?</div>
+                    <div class="card-back"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay hidden" id="game-over">
+        <h2>¡Juego Terminado!</h2>
+        <p id="game-over-text"></p>
+        <button id="restart-btn">Seguir jugando</button>
+        <button id="overlay-exit-btn">Salir del juego</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

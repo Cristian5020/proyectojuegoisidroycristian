@@ -1,0 +1,251 @@
+.hidden {
+    display: none;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url("../img/fondo.jpeg");
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-position:center; /* Centra la imagen en la pantalla */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    overflow: hidden;
+    height: 100vh;
+
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    
+  
+}
+
+
+.game-container {
+    text-align: center;
+    color: #4d2f09;
+    margin-top: 10px;
+}
+
+h1 {
+    text-align: center;
+    text-shadow: 
+        -1px -1px 0px rgb(255, 255, 255),  
+        1px -1px 0px rgb(136, 76, 8),
+        -1px 1px 0px rgb(136, 76, 8),
+        1px 1px 0px rgb(136, 76, 8);
+    margin-bottom: 15px;
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+
+
+#timer {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin:  auto;
+    margin-bottom: 15px;
+    background-color: #2b5a35;
+    width:20%;
+    margin-top: 7px;
+    justify-content: center;
+    font-size: 1.5em;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 80px);
+    gap: 10px;
+    justify-content: center;
+}
+
+.card {
+    width: 85px;
+    height: 85px;
+    background-image: url('../img/tabla.jpg');
+    background-size: cover;
+    background-position: center;
+    perspective: 1000px;
+    transform: scale(0);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.card.show {
+    transform: scale(1);
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: white;
+}
+
+.card-front {
+    background-color: #333;
+}
+
+.card-back {
+    color: transparent;
+}
+
+.card[data-name='A'] .card-back {
+    background-image: url('../img/mario.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+}
+
+.card[data-name='B'] .card-back {
+    background-image: url('../img/browser.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+}
+
+.card[data-name='C'] .card-back {
+    background-image: url('../img/hbros.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+}
+
+.card[data-name='D'] .card-back {
+    background-image: url('../img/princ.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+}
+
+.card[data-name='E'] .card-back {
+    background-image: url('../img/personajes.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+}
+
+.card[data-name='F'] .card-back {
+    background-image: url('../img/kong.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+}
+
+.card[data-name='G'] .card-back {
+    background-image: url('../img/todos.jpg'); 
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+}
+
+.card[data-name='H'] .card-back {
+    background-image: url('../img/yoshi.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+}
+
+
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #1c78e0;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #324ad1;
+}
+
+#exit-btn {
+    background-color: #f13224;
+}
+
+#exit-btn:hover {
+    background-color: #c51212;
+}
+
+#overlay-exit-btn {
+    background-color: #f52020;
+}
+
+#overlay-exit-btn:hover {
+    background-color: #c51212;
+}
+
+#dejar-btn {
+    background-color: #d3a21d;
+}
+
+#dejar-btn:hover {
+    background-color: #a58019;
+}
+
+.correct-match {
+    animation: grow 0.9s ease-in-out;
+}
+
+
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    flex-direction: column;
+    font-size: 2em;
+}
+
+.overlay.hidden {
+    display: none;
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2); /* Agrandar a 120% */
+    }
+    100% {
+        transform: scale(1); /* Volver al tamaño normal */
+    }
+}
+

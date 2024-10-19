@@ -1,0 +1,57 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('../img/ciu.jpg');
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-position:center; /* Centra la imagen en la pantalla */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    display: flex;
+    flex-direction: column; /* Cambia la dirección del flex para apilar elementos */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+.info-container {
+    background-color: rgba(251, 246, 246, 0.8); /* Fondo blanco con un poco de transparencia */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    text-align: center;
+    width: 300px;
+    margin-bottom: 20px; /* Espacio entre la información y el menú */
+}
+
+.menu-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con un poco de transparencia */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+}
+
+h1 {
+    color: #333;
+}
+
+h2 {
+    color: #555; /* Color del texto para la información */
+}
+
+.menu-item {
+    background-color: #3ea8f9;
+    color: white;
+    border: none;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+    background-color: #0c3dc5;
+}

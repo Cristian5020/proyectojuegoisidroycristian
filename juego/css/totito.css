@@ -1,0 +1,163 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('../img/car.jpg');
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-position:center; /* Centra la imagen en la pantalla */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+   display: flex;
+    flex-direction: column; /* Cambia la dirección del flex para apilar elementos */
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.hidden {
+    display: none;
+}
+
+#player-form {
+    
+    justify-content: center;
+    align-items: center; /* Centra verticalmente si es necesario */
+}
+
+
+#player-form label {
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-color: #444444;
+    border-radius: 3px;
+    padding: 5px 20px; 
+    
+
+}
+
+#player-form input {
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 1rem;
+    border-radius: 8px;
+}
+#player-form button {
+    display:flex;
+    margin: 15px auto ; /* Esto lo centrará horizontalmente */
+    padding: 5px 20px;
+    background-color: #29611e;
+    color: #ffffff;
+    border-radius: 8px;
+}
+
+#start-btn:hover {
+    background-color: #1b7a0d;
+}
+
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#game-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;  /* Espacio entre el tablero y el contador */
+    margin-bottom: 20px;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);  /* Tamaño original de los cuadros */
+    grid-template-rows: repeat(3, 100px);  /* Tamaño original de los cuadros */
+    gap: 10px;
+}
+
+.cell {
+    width: 100px;  /* Tamaño original */
+    height: 100px;  /* Tamaño original */
+    background-color: #84b16671;
+    border: 3px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;  /* Tamaño original del texto */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#game-status { /* Estilo para turnos de jugadores */
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #ffffffb0;
+    text-align: center;
+    background-color: #152213;
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+
+#buttons {
+    text-align: center;
+}
+
+#restart-btn, #end-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #29611e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+#restart-btn:hover, #end-btn:hover {
+    background-color: #1b7a0d;
+}
+
+#scoreboard {
+    position: absolute; /* Permite posicionar el div en coordenadas específicas */
+    top: 20px; /* Distancia desde la parte superior */
+    right: 20px; /* Distancia desde la derecha */
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.288); /* Fondo semi-transparente para mejor visibilidad */
+    padding: 10px; /* Espacio interno */
+    border: 2px solid #000; /* Bordes para destacar */
+    border-radius: 8px; /* Bordes redondeados */
+    z-index: 10; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+#scoreboard h2 {
+    font-size: 1.8rem;
+}
+
+#scoreboard p {
+    font-size: 1.4rem;
+}
+
+
+.win {
+    background-color: yellow; /* O cualquier estilo que prefieras */
+}
+.cell:hover {
+    background-color: rgba(255, 255, 255, 0.288); /* Cambia al pasar el mouse */
+}
+
+.cell[data-player='X'] {
+    background-color: #b85c5a; /* Color para X */
+}
+
+.cell[data-player='O'] {
+    background-color: #53aecc; /* Color para O */
+}
+
+.win {
+    background: linear-gradient(to right, yellow, orange);
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+

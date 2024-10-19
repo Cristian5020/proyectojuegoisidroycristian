@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Totito</title>
+    <link rel="stylesheet" href="css/totito.css">
+</head>
+<body>
+    <h1>Juego del Totito</h1>
+
+    <!-- Formulario para ingresar nombres de los jugadores -->
+    <div id="player-form">
+        <label for="player1">Nombre del Jugador X:</label>
+        <input type="text" id="player1" placeholder="Jugador X">
+        <br>
+        <label for="player2">Nombre del Jugador O:</label>
+        <input type="text" id="player2" placeholder="Jugador O">
+        <br>
+        <button id="start-btn">Iniciar Juego</button>
+    </div>
+
+    <!-- Contenedor que alinea el tablero y el contador de partidas -->
+    <div id="game-container">
+        <!-- Tablero del juego -->
+        <div id="game-board" class="hidden">
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+        </div>
+    
+        <!-- Contador de partidas -->
+        <div id="scoreboard" class="hidden">
+            <h2>Partidas Ganadas</h2>
+            <p><span id="playerX-name">Jugador X</span>: <span id="playerX-score">0</span></p>
+            <p><span id="playerO-name">Jugador O</span>: <span id="playerO-score">0</span></p>
+        </div>
+    </div>
+    
+    <div id="game-status"></div>
+    
+    <!-- Mover la sección de botones aquí -->
+    <div id="buttons" class="hidden">
+        <button id="restart-btn">Salir del Juego</button>
+        <button id="end-btn">Terminar Partida</button>
+    </div>
+      
+
+    <script src="js/totito.js"></script>
+</body>
+</html>
